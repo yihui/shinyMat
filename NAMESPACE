@@ -2,3 +2,4 @@
 
 export(matrixInput)
 export(updateMatrixInput)
+import(utils)
