@@ -1,0 +1,18 @@
+Package: shinyMat
+Title: A Lightweight Editable Matrix Input for Shiny
+Version: 0.0.1
+Authors@R: person('Yihui', 'Xie', email = 'xie@yihui.name', role = c('aut', 'cre', 'cph'),
+    comment = c(ORCID = '0000-0003-0645-5666', URL = 'https://yihui.org'))
+Description: An editable matrix (grid of text inputs) as a Shiny input, with a
+    dependency-free vanilla-JavaScript client binding. Create a matrix input
+    with 'matrixInput()' and update it from the server with
+    'updateMatrixInput()'. A trimmed, Vue-free reimplementation of the subset of
+    the 'shinyMatrix' widget needed by typical apps: a static header row of
+    column names plus editable cells, with server-driven resets.
+Imports:
+    htmltools,
+    shiny,
+    utils
+License: MIT + file LICENSE
+Encoding: UTF-8
+Config/roxygen2/version: 8.1.0
