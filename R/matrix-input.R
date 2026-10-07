@@ -23,6 +23,7 @@
 #'   Numeric inputs reject non-numeric cell entries on the client.
 #' @return A Shiny input element.
 #' @seealso [updateMatrixInput()] to change the value from the server.
+#' @import utils
 #' @export
 #' @examples
 #' if (interactive()) {
