@@ -3,6 +3,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/yihui/shinyMat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yihui/shinyMat/actions/workflows/R-CMD-check.yaml)
+[![shinyMat on r-universe](https://yihui.r-universe.dev/badges/shinyMat)](https://yihui.r-universe.dev/shinyMat)
 
 <!-- badges: end -->
 
@@ -20,7 +21,10 @@ from the server rather than the client.
 ## Installation
 
 ``` r
-# development version
+# install from r-universe
+install.packages("shinyMat", repos = "https://yihui.r-universe.dev")
+
+# or the development version from GitHub
 remotes::install_github("yihui/shinyMat")
 ```
 
