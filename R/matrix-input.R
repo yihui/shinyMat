@@ -137,8 +137,14 @@ json_atom = function(v) {
 #' @export
 updateMatrixInput = function(session, inputId, value) {
   stopifnot(is.matrix(value))
+  # sendInputMessage() encodes with jsonlite auto_unbox, which would collapse a
+  # length-1 vector (e.g. a single column name) to a bare scalar; the client
+  # expects arrays everywhere (it reads length-1 values as element [0]). Wrap in
+  # lists so every vector stays a JSON array -- matching to_json() at init time.
   session$sendInputMessage(inputId, list(value = list(
-    data = value, rownames = rownames(value), colnames = colnames(value)
+    data = lapply(seq_len(nrow(value)), function(i) as.list(unname(value[i, ]))),
+    rownames = as.list(rownames(value)),
+    colnames = as.list(colnames(value))
   )))
 }
 
